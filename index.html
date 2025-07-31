@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Belajar Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="fade-in-down">💻 Belajar HTML, CSS & JS</h1>
+      <p>Membangun website interaktif dari dasar dengan desain modern.</p>
+      <nav>
+        <a href="#tentang">🏠 Tentang</a>
+        <a href="#formulir">📝 Formulir</a>
+        <a href="#kontak">📬 Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="tentang" class="card fade-in">
+      <h2>Tentang Website</h2>
+      <p><strong>HTML</strong> digunakan untuk membuat struktur halaman.</p>
+      <p><em>CSS</em> memberikan tampilan dan estetika.</p>
+      <p><u>JavaScript</u> menambahkan fungsi interaktif ke situs web.</p>
+      <img src="ilustrasi.png" alt="Ilustrasi Web Developer" />
+    </section>
+
+    <section id="formulir" class="card fade-in">
+      <h2>Formulir Pendaftaran</h2>
+      <form id="form" onsubmit="return validateForm()">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+
+        <label for="email">Email Aktif:</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required />
+
+        <label for="hobi">Hobi:</label>
+        <select id="hobi" name="hobi">
+          <option value="Coding">💡 Coding</option>
+          <option value="Desain">🎨 Desain</option>
+          <option value="Gaming">🎮 Gaming</option>
+        </select>
+
+        <div class="btn-group">
+          <button type="submit">✅ Kirim</button>
+          <button type="reset" class="btn-secondary">↩️ Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="kontak" class="card fade-in">
+      <h2>Kontak Saya</h2>
+      <p>📧 Email: <a href="mailto:email@example.com">rizkiajinugraha93@gmail.com</a></p>
+      <p>🌐 Website: <a href="#">http://127.0.0.1:5500/index.html#tentang</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Website Pemrograman — Dibuat dengan ❤️ dan semangat belajar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

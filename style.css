@@ -1,0 +1,220 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f0f9ff);
+  color: #333;
+  line-height: 1.7;
+}
+a {
+  text-decoration: none;
+  color: #2563eb;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #1e40af;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 5px solid #1d4ed8;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+nav {
+  margin-top: 25px;
+}
+nav a {
+  margin: 0 14px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s;
+}
+nav a:hover {
+  color: #fffb00;
+  transform: scale(1.05);
+}
+
+/* CONTAINER & KARTU */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.card h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+form input:focus,
+form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* TOMBOL */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.03);
+}
+.btn-secondary {
+  background-color: #9ca3af;
+}
+.btn-secondary:hover {
+  background-color: #6b7280;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #111827;
+  color: white;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* ANIMASI MASUK */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+.fade-in-down {
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* NOTIFIKASI */
+.notif {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeSlide 0.3s ease;
+}
+.notif.error {
+  background-color: #ef4444;
+}
+.notif.success {
+  background-color: #10b981;
+}
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .card {
+    padding: 20px;
+  }
+  form input,
+  form select {
+    width: 100%;
+  }
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
